@@ -88,7 +88,7 @@ for status in search_results:
     sentiment_score = get_sentiment_score(analyse_response)
 
     # 感情スコアが-0.7以下の場合にはSlack投稿文章用の辞書に追加する。
-    if sentiment_score >= 0.3:
+    if sentiment_score <= 0.7:
         tweet_link = 'https://twitter.com/{}/status/{}'.format(user.screen_name, str(status.id))
         tweet_dict[tweet_link] = sentiment_score
 
