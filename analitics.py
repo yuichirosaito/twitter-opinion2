@@ -54,7 +54,7 @@ auth.set_access_token(ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
 
 # ツイート検索する文章（ここを書き換えれば、検索する単語変えられる）
-search_text = '東京オリンピック'
+search_text = '緊急事態宣言'
 
 # ツイートを検索する（リプライは対象外とする）
 search_results = api.search(q=search_text, count=100, lang='ja', result_type='mixed', exclude_replies=True)
